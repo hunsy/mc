@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hunsy.metadata.mapper.GzInfoMapper" >
+
+  <resultMap id="BaseResultMap" type="com.hunsy.metadata.entity.GzInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="gz_no" property="gzNo" jdbcType="VARCHAR" />
+    <result column="statistic_id" property="statisticId" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="created_at" property="createdAt" jdbcType="DATE" />
+    <result column="updated_at" property="updatedAt" jdbcType="DATE" />
+    <result column="valid" property="valid" jdbcType="BIT" />
+  </resultMap>
+
+
+  <select id="findLastByType" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from gz_info where type = #{type} order by gz_no desc limit 0,1
+  </select>
+</mapper>
