@@ -7,3 +7,5 @@
 [Mapper](https://github.com/abel533/Mapper)
 
 [Mybatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper)
+
+[对应前端(cm_web)](git@github.com:hunsy/cm_web.git)
